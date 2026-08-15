@@ -25,6 +25,16 @@ const fullServices = [
   "Strauchschnitt", "Baumschnitt und Baumpflege", "Baumfällung", "Planung und Beratung",
 ];
 
+const ribbonImages = [
+  ["unsplash-gartenweg.jpg", "Begrünter Gartenweg"],
+  ["projekt-11.jpg", "Treppenanlage aus Stein"],
+  ["projekt-07.jpg", "Vorbereitung einer Gartenfläche"],
+  ["unsplash-gartenruhe.jpg", "Grüner Garten mit altem Baumbestand"],
+  ["projekt-04.jpg", "Aufbau einer eingefassten Fläche"],
+  ["projekt-09.jpg", "Baumpflege in großer Höhe"],
+  ["projekt-02.jpg", "Neu angelegter Gartenweg"],
+];
+
 export default function Home() {
   return (
     <main>
@@ -79,8 +89,8 @@ export default function Home() {
       <section className="green-focus reveal">
         <div className="shell green-focus-grid">
           <div className="green-focus-copy"><p className="eyebrow dark"><span /> Pflege & Gestaltung</p><h2>Mehr Grün.<br/><em>Mehr Garten.</em></h2><p>Ob regelmäßige Pflege oder neue Gartengestaltung: Im Mittelpunkt steht ein lebendiger Außenraum, der zu Ihnen passt und dauerhaft gut funktioniert.</p><a className="text-link dark-link" href="mailto:info@arslan-gartenloewe.de?subject=Anfrage%20Gartenpflege%20und%20Gestaltung">Gartenprojekt besprechen <i className="arrow-icon" aria-hidden="true" /></a></div>
-          <div className="green-image green-image-main"><img src={`${base}/images/gartengestaltung-symbolbild.jpg`} alt="Inspiration für eine grüne Gartengestaltung" loading="lazy"/><small>Inspiration · illustrative Darstellung</small></div>
-          <div className="green-image green-image-side"><img src={`${base}/images/gartenpflege-symbolbild.jpg`} alt="Illustrative Darstellung professioneller Heckenpflege" loading="lazy"/><small>Gartenpflege · illustrative Darstellung</small></div>
+          <div className="green-image green-image-main"><img src={`${base}/images/unsplash-gartenanlage.jpg`} alt="Großzügige grüne Gartenanlage mit Rasen und vielfältiger Bepflanzung" loading="lazy"/><small>Gartengestaltung</small></div>
+          <div className="green-image green-image-side"><img src={`${base}/images/unsplash-hecke.jpg`} alt="Frisch und gleichmäßig geschnittene hohe Gartenhecke" loading="lazy"/><small>Heckenpflege</small></div>
         </div>
       </section>
 
@@ -106,7 +116,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="image-ribbon" aria-label="Weitere echte Arbeiten"><div className="ribbon-track">{["projekt-11.jpg","projekt-07.jpg","projekt-04.jpg","projekt-09.jpg","projekt-02.jpg"].map((img,i)=><figure key={img}><img src={`${base}/images/${img}`} alt={`Arslan Garten-Löwe Projektansicht ${i+1}`} loading="lazy"/></figure>)}</div></section>
+      <section className="image-ribbon" aria-label="Weitere Gartenimpressionen">
+        <div className="ribbon-track">
+          {[...ribbonImages, ...ribbonImages].map(([img, alt], i)=><figure key={`${img}-${i}`} aria-hidden={i >= ribbonImages.length}><img src={`${base}/images/${img}`} alt={i < ribbonImages.length ? alt : ""} loading="lazy"/></figure>)}
+        </div>
+      </section>
 
       <section className="review-section reveal"><div className="shell review-grid"><div><p className="eyebrow dark"><span /> Kundenstimme</p><div className="stars" aria-label="5 von 5 Sternen">★★★★★</div></div><blockquote>„Sauber, unkompliziert, schnell. Unsere alten Büsche wurden entfernt, entsorgt und eine neue Hecke gepflanzt. Wir sind sehr zufrieden.“<cite>– Bewertung auf Gartenbau.org, März 2025</cite></blockquote></div><div className="shell profile-links"><div className="profile-intro"><strong>Nachprüfbare Stimmen.</strong><span>Sehen Sie selbst, wie Kunden unsere Arbeit bewerten.</span></div><a href="https://www.my-hammer.de/auftragnehmer/arslan-gartenpflege-und-gestaltung/bewertungen" target="_blank" rel="noreferrer" aria-label="65 Bewertungen bei MyHammer ansehen"><span className="profile-rating">4,9</span><span><strong>MyHammer</strong><small>65 Kundenbewertungen ansehen</small></span><i className="arrow-icon" aria-hidden="true" /></a><a href="https://www.provenexpert.com/de-de/arslan-garten-loewe-gartenpflege-garten-landschaftsbau/" target="_blank" rel="noreferrer" aria-label="Bewertungen bei ProvenExpert ansehen"><span className="profile-rating">5,0</span><span><strong>Google-Bewertungen</strong><small>8 Bewertungen · via ProvenExpert</small></span><i className="arrow-icon" aria-hidden="true" /></a><a href="https://www.gartenbau.org/norderstedt/arslan-garten-loewe-gartenpflege-garten-landschaftsbau-aUOsYJ" target="_blank" rel="noreferrer" aria-label="Profil bei Gartenbau.org ansehen"><span className="profile-rating">5,0</span><span><strong>Gartenbau.org</strong><small>Profil und Kundenstimme ansehen</small></span><i className="arrow-icon" aria-hidden="true" /></a></div></section>
 
