@@ -53,7 +53,7 @@ export default function Home() {
             <a className="text-link" href="#projekte">Arbeiten ansehen <span aria-hidden="true">↓</span></a>
           </div>
           <div className="hero-proof">
-            <div><strong>4,9 / 5</strong><span>Kundenbewertung*</span></div>
+            <div><strong>5,0 / 5</strong><span>Google-Bewertungen*</span></div>
             <div><strong>Regional</strong><span>Im Hamburger Norden</span></div>
             <div><strong>Persönlich</strong><span>Von Planung bis Pflege</span></div>
           </div>
@@ -108,7 +108,7 @@ export default function Home() {
 
       <section className="image-ribbon" aria-label="Weitere echte Arbeiten"><div className="ribbon-track">{["projekt-11.jpg","projekt-07.jpg","projekt-04.jpg","projekt-09.jpg","projekt-02.jpg"].map((img,i)=><figure key={img}><img src={`${base}/images/${img}`} alt={`Arslan Garten-Löwe Projektansicht ${i+1}`} loading="lazy"/></figure>)}</div></section>
 
-      <section className="review-section reveal"><div className="shell review-grid"><div><p className="eyebrow dark"><span /> Kundenstimme</p><div className="stars" aria-label="5 von 5 Sternen">★★★★★</div></div><blockquote>„Sauber, unkompliziert, schnell. Unsere alten Büsche wurden entfernt, entsorgt und eine neue Hecke gepflanzt. Wir sind sehr zufrieden.“<cite>– Bewertung auf Gartenbau.org, März 2025</cite></blockquote></div></section>
+      <section className="review-section reveal"><div className="shell review-grid"><div><p className="eyebrow dark"><span /> Kundenstimme</p><div className="stars" aria-label="5 von 5 Sternen">★★★★★</div></div><blockquote>„Sauber, unkompliziert, schnell. Unsere alten Büsche wurden entfernt, entsorgt und eine neue Hecke gepflanzt. Wir sind sehr zufrieden.“<cite>– Bewertung auf Gartenbau.org, März 2025</cite></blockquote></div><div className="shell profile-links"><div className="profile-intro"><strong>Nachprüfbare Stimmen.</strong><span>Sehen Sie selbst, wie Kunden unsere Arbeit bewerten.</span></div><a href="https://www.provenexpert.com/de-de/arslan-garten-loewe-gartenpflege-garten-landschaftsbau/" target="_blank" rel="noreferrer" aria-label="Bewertungen bei ProvenExpert ansehen"><span className="profile-rating">5,0</span><span><strong>Google-Bewertungen</strong><small>8 Bewertungen · via ProvenExpert</small></span><b aria-hidden="true">↗</b></a><a href="https://www.gartenbau.org/norderstedt/arslan-garten-loewe-gartenpflege-garten-landschaftsbau-aUOsYJ" target="_blank" rel="noreferrer" aria-label="Profil bei Gartenbau.org ansehen"><span className="profile-rating">5,0</span><span><strong>Gartenbau.org</strong><small>Profil und Kundenstimme ansehen</small></span><b aria-hidden="true">↗</b></a></div></section>
 
       <section id="kontakt" className="contact-section reveal"><div className="shell contact-grid"><div><p className="eyebrow"><span /> Ihr Garten. Unser nächstes Projekt.</p><h2>Erzählen Sie uns,<br/>was Sie <em>vorhaben.</em></h2></div><div className="contact-actions"><a className="button light" href="mailto:info@arslan-gartenloewe.de?subject=Projektanfrage%20über%20die%20Website">E-Mail schreiben <span>↗</span></a><a href="tel:+4917685466600">+49 176 854 66 600</a><a href="https://wa.me/4917685466600" target="_blank" rel="noreferrer">Per WhatsApp anfragen ↗</a></div></div></section>
 
