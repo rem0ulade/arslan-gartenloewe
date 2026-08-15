@@ -10,12 +10,12 @@ const services = [
 ];
 
 const projects = [
-  ["projekt-06.png", "Pflasterarbeiten", "Fläche sauber aufgebaut und Stein für Stein neu gefasst."],
+  ["weitere-01.jpg", "Heckenpflege", "Große Formhecken sauber, gleichmäßig und sicher zurückgeschnitten."],
+  ["weitere-08.jpg", "Gehölzschnitt", "Konsequenter Rückschnitt für klare Grenzen und einen gesunden Neuaustrieb."],
+  ["projekt-10.jpg", "Baumpflege", "Arbeiten an hohen Bäumen mit dem notwendigen Blick für Sicherheit und Umfeld."],
   ["projekt-01.jpg", "Sichtschutz & Fläche", "Moderner Sichtschutz kombiniert mit einer neu gepflasterten Nutzfläche."],
   ["projekt-03.jpg", "Terrassenbau", "Großformatige Platten, präzise Höhen und eine robuste Einfassung."],
-  ["projekt-08.jpg", "Mauer- & Klinkerarbeiten", "Bestehende Materialien sorgfältig aufgenommen und neu verarbeitet."],
-  ["projekt-10.jpg", "Terrasse & Zuwegung", "Klare Linien und ein durchgängiger Belag rund ums Haus."],
-  ["projekt-12.jpg", "Zufahrt pflastern", "Solider Unterbau und ein belastbarer Weg bis zum Grundstück."],
+  ["projekt-06.png", "Pflasterarbeiten", "Fläche sauber aufgebaut und Stein für Stein neu gefasst."],
 ];
 
 const fullServices = [
@@ -76,9 +76,17 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="green-focus reveal">
+        <div className="shell green-focus-grid">
+          <div className="green-focus-copy"><p className="eyebrow dark"><span /> Pflege & Gestaltung</p><h2>Mehr Grün.<br/><em>Mehr Garten.</em></h2><p>Ob regelmäßige Pflege oder neue Gartengestaltung: Im Mittelpunkt steht ein lebendiger Außenraum, der zu Ihnen passt und dauerhaft gut funktioniert.</p><a className="text-link dark-link" href="mailto:info@arslan-gartenloewe.de?subject=Anfrage%20Gartenpflege%20und%20Gestaltung">Gartenprojekt besprechen <span>↗</span></a></div>
+          <div className="green-image green-image-main"><img src={`${base}/images/gartengestaltung-symbolbild.jpg`} alt="Inspiration für eine grüne Gartengestaltung" loading="lazy"/><small>Inspiration · illustrative Darstellung</small></div>
+          <div className="green-image green-image-side"><img src={`${base}/images/gartenpflege-symbolbild.jpg`} alt="Illustrative Darstellung professioneller Heckenpflege" loading="lazy"/><small>Gartenpflege · illustrative Darstellung</small></div>
+        </div>
+      </section>
+
       <section id="projekte" className="section projects-section reveal">
         <div className="shell">
-          <div className="section-head"><p className="eyebrow"><span /> Echte Arbeiten</p><h2>Vom ersten Spatenstich<br/>bis zum <em>letzten Stein.</em></h2></div>
+          <div className="section-head"><p className="eyebrow"><span /> Echte Arbeiten</p><h2>Vom ersten Schnitt<br/>bis zum <em>letzten Stein.</em></h2></div>
           <div className="project-grid">
             {projects.map(([img,t,d],i) => <article className={`project-card project-${i+1}`} key={img}>
               <img src={`${base}/images/${img}`} alt={`${t} von Arslan Garten-Löwe`} loading={i ? "lazy" : undefined}/>
