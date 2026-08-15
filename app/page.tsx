@@ -13,6 +13,16 @@ const projects = [
   ["projekt-06.png", "Pflasterarbeiten", "Fläche sauber aufgebaut und Stein für Stein neu gefasst."],
   ["projekt-01.jpg", "Sichtschutz & Fläche", "Moderner Sichtschutz kombiniert mit einer neu gepflasterten Nutzfläche."],
   ["projekt-03.jpg", "Terrassenbau", "Großformatige Platten, präzise Höhen und eine robuste Einfassung."],
+  ["projekt-08.jpg", "Mauer- & Klinkerarbeiten", "Bestehende Materialien sorgfältig aufgenommen und neu verarbeitet."],
+  ["projekt-10.jpg", "Terrasse & Zuwegung", "Klare Linien und ein durchgängiger Belag rund ums Haus."],
+  ["projekt-12.jpg", "Zufahrt pflastern", "Solider Unterbau und ein belastbarer Weg bis zum Grundstück."],
+];
+
+const fullServices = [
+  "Gartenneu- und -umgestaltung", "Gartenpflege – einmalig oder ganzjährig", "Pflaster- und Plattenarbeiten", "Gartenwege anlegen",
+  "Terrassenbau", "Natursteinarbeiten aller Art", "Zäune und Sichtschutz", "Landschaftsbau",
+  "Rasenflächen erneuern", "Rollrasen verlegen", "Rasen vertikutieren", "Heckenschnitt",
+  "Strauchschnitt", "Baumschnitt und Baumpflege", "Baumfällung", "Planung und Beratung",
 ];
 
 export default function Home() {
@@ -50,7 +60,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="leistungen" className="section services-section">
+      <section id="leistungen" className="section services-section reveal">
         <div className="shell">
           <div className="section-head split">
             <div><p className="eyebrow dark"><span /> Was wir für Sie tun</p><h2>Alles für Ihren<br/><em>Außenbereich.</em></h2></div>
@@ -59,10 +69,14 @@ export default function Home() {
           <div className="service-grid">
             {services.map(([n,t,d]) => <article className="service-card" key={n}><span className="service-no">{n}</span><h3>{t}</h3><p>{d}</p><a href="mailto:info@arslan-gartenloewe.de?subject=Anfrage%20zu%20einer%20Leistung" aria-label={`${t} anfragen`}>Anfragen <span>↗</span></a></article>)}
           </div>
+          <div className="full-services">
+            <div className="full-services-intro"><p className="eyebrow dark"><span /> Leistungskatalog</p><h3>Unser Unternehmen<br/><em>bietet.</em></h3><p>Ein Ansprechpartner für Pflege, Bau und Gestaltung – von der ersten Beratung bis zur sauberen Übergabe.</p></div>
+            <ul>{fullServices.map((item,i)=><li key={item} style={{animationDelay:`${i*35}ms`}}><span aria-hidden="true">↗</span>{item}</li>)}</ul>
+          </div>
         </div>
       </section>
 
-      <section id="projekte" className="section projects-section">
+      <section id="projekte" className="section projects-section reveal">
         <div className="shell">
           <div className="section-head"><p className="eyebrow"><span /> Echte Arbeiten</p><h2>Vom ersten Spatenstich<br/>bis zum <em>letzten Stein.</em></h2></div>
           <div className="project-grid">
@@ -75,7 +89,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="ueber-uns" className="section about-section">
+      <section id="ueber-uns" className="section about-section reveal">
         <div className="shell about-grid">
           <div className="about-visual"><img src={`${base}/images/projekt-05.jpg`} alt="Pflasterarbeiten von Arslan Garten-Löwe" loading="lazy"/><div className="about-stamp"><strong>100%</strong><span>Echte<br/>Handarbeit</span></div></div>
           <div className="about-copy"><p className="eyebrow dark"><span /> Warum Arslan</p><h2>Direkt. Sauber.<br/><em>Verlässlich.</em></h2><p className="lead">Ein Ansprechpartner, ein eingespieltes Team und ein Ergebnis, das sich sehen lassen kann.</p>
@@ -84,9 +98,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="review-section"><div className="shell review-grid"><div><p className="eyebrow"><span /> Kundenstimme</p><div className="stars" aria-label="5 von 5 Sternen">★★★★★</div></div><blockquote>„Sauber, unkompliziert, schnell. Unsere alten Büsche wurden entfernt, entsorgt und eine neue Hecke gepflanzt. Wir sind sehr zufrieden.“<cite>– Bewertung auf Gartenbau.org, März 2025</cite></blockquote></div></section>
+      <section className="image-ribbon" aria-label="Weitere echte Arbeiten"><div className="ribbon-track">{["projekt-11.jpg","projekt-07.jpg","projekt-04.jpg","projekt-09.jpg","projekt-02.jpg"].map((img,i)=><figure key={img}><img src={`${base}/images/${img}`} alt={`Arslan Garten-Löwe Projektansicht ${i+1}`} loading="lazy"/></figure>)}</div></section>
 
-      <section id="kontakt" className="contact-section"><div className="shell contact-grid"><div><p className="eyebrow"><span /> Ihr Garten. Unser nächstes Projekt.</p><h2>Erzählen Sie uns,<br/>was Sie <em>vorhaben.</em></h2></div><div className="contact-actions"><a className="button light" href="mailto:info@arslan-gartenloewe.de?subject=Projektanfrage%20über%20die%20Website">E-Mail schreiben <span>↗</span></a><a href="tel:+4917685466600">+49 176 854 66 600</a><a href="https://wa.me/4917685466600" target="_blank" rel="noreferrer">Per WhatsApp anfragen ↗</a></div></div></section>
+      <section className="review-section reveal"><div className="shell review-grid"><div><p className="eyebrow dark"><span /> Kundenstimme</p><div className="stars" aria-label="5 von 5 Sternen">★★★★★</div></div><blockquote>„Sauber, unkompliziert, schnell. Unsere alten Büsche wurden entfernt, entsorgt und eine neue Hecke gepflanzt. Wir sind sehr zufrieden.“<cite>– Bewertung auf Gartenbau.org, März 2025</cite></blockquote></div></section>
+
+      <section id="kontakt" className="contact-section reveal"><div className="shell contact-grid"><div><p className="eyebrow"><span /> Ihr Garten. Unser nächstes Projekt.</p><h2>Erzählen Sie uns,<br/>was Sie <em>vorhaben.</em></h2></div><div className="contact-actions"><a className="button light" href="mailto:info@arslan-gartenloewe.de?subject=Projektanfrage%20über%20die%20Website">E-Mail schreiben <span>↗</span></a><a href="tel:+4917685466600">+49 176 854 66 600</a><a href="https://wa.me/4917685466600" target="_blank" rel="noreferrer">Per WhatsApp anfragen ↗</a></div></div></section>
 
       <footer><div className="shell footer-grid"><a href="#start" className="brand footer-brand"><img src={`${base}/logo.png`} alt=""/><span><strong>ARSLAN</strong><small>GARTEN-LÖWE</small></span></a><div><strong>Kontakt</strong><a href="tel:+4917685466600">+49 176 854 66 600</a><a href="mailto:info@arslan-gartenloewe.de">info@arslan-gartenloewe.de</a></div><div><strong>Standort</strong><p>Friedrichsgaber Weg 411<br/>22846 Norderstedt</p></div><div><strong>Rechtliches</strong><a href="https://arslan-gartenloewe.de/privacy-policy" target="_blank" rel="noreferrer">Datenschutz</a><a href="mailto:info@arslan-gartenloewe.de?subject=Impressum">Impressum anfragen</a></div></div><div className="shell footer-bottom"><span>© {new Date().getFullYear()} Arslan Garten-Löwe</span><span>* Bewertungshinweis im Quellenabschnitt der Website-Analyse.</span></div></footer>
 
