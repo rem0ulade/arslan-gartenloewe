@@ -53,9 +53,9 @@ export default function Home() {
             <a className="text-link" href="#projekte">Arbeiten ansehen <span aria-hidden="true">↓</span></a>
           </div>
           <div className="hero-proof">
-            <div><strong>5,0 / 5</strong><span>Google-Bewertungen*</span></div>
-            <div><strong>Regional</strong><span>Im Hamburger Norden</span></div>
-            <div><strong>Persönlich</strong><span>Von Planung bis Pflege</span></div>
+            <a href="https://www.my-hammer.de/auftragnehmer/arslan-gartenpflege-und-gestaltung/bewertungen" target="_blank" rel="noreferrer" aria-label="65 Bewertungen bei MyHammer ansehen"><strong>4,9 / 5 <b>↗</b></strong><span>65 Bewertungen auf MyHammer</span></a>
+            <a href="https://www.provenexpert.com/de-de/arslan-garten-loewe-gartenpflege-garten-landschaftsbau/" target="_blank" rel="noreferrer" aria-label="Google-Bewertungen über ProvenExpert ansehen"><strong>5,0 / 5 <b>↗</b></strong><span>8 Google-Bewertungen</span></a>
+            <a href="https://www.gartenbau.org/norderstedt/arslan-garten-loewe-gartenpflege-garten-landschaftsbau-aUOsYJ" target="_blank" rel="noreferrer" aria-label="Bewertung bei Gartenbau.org ansehen"><strong>5,0 / 5 <b>↗</b></strong><span>Bewertung auf Gartenbau.org</span></a>
           </div>
         </div>
       </section>
@@ -112,7 +112,7 @@ export default function Home() {
 
       <section id="kontakt" className="contact-section reveal"><div className="shell contact-grid"><div><p className="eyebrow"><span /> Ihr Garten. Unser nächstes Projekt.</p><h2>Erzählen Sie uns,<br/>was Sie <em>vorhaben.</em></h2></div><div className="contact-actions"><a className="button light" href="mailto:info@arslan-gartenloewe.de?subject=Projektanfrage%20über%20die%20Website">E-Mail schreiben <span>↗</span></a><a href="tel:+4917685466600">+49 176 854 66 600</a><a href="https://wa.me/4917685466600" target="_blank" rel="noreferrer">Per WhatsApp anfragen ↗</a></div></div></section>
 
-      <footer><div className="shell footer-grid"><a href="#start" className="brand footer-brand"><img src={`${base}/logo.png`} alt=""/><span><strong>ARSLAN</strong><small>GARTEN-LÖWE</small></span></a><div><strong>Kontakt</strong><a href="tel:+4917685466600">+49 176 854 66 600</a><a href="mailto:info@arslan-gartenloewe.de">info@arslan-gartenloewe.de</a></div><div><strong>Standort</strong><p>Friedrichsgaber Weg 411<br/>22846 Norderstedt</p></div><div><strong>Rechtliches</strong><a href="https://arslan-gartenloewe.de/privacy-policy" target="_blank" rel="noreferrer">Datenschutz</a><a href="mailto:info@arslan-gartenloewe.de?subject=Impressum">Impressum anfragen</a></div></div><div className="shell footer-bottom"><span>© {new Date().getFullYear()} Arslan Garten-Löwe</span><span>* Bewertungshinweis im Quellenabschnitt der Website-Analyse.</span></div></footer>
+      <footer><div className="shell footer-grid"><a href="#start" className="brand footer-brand"><img src={`${base}/logo.png`} alt=""/><span><strong>ARSLAN</strong><small>GARTEN-LÖWE</small></span></a><div><strong>Kontakt</strong><a href="tel:+4917685466600">+49 176 854 66 600</a><a href="mailto:info@arslan-gartenloewe.de">info@arslan-gartenloewe.de</a></div><div><strong>Standort</strong><p>Friedrichsgaber Weg 411<br/>22846 Norderstedt</p></div><div><strong>Rechtliches</strong><a href="https://arslan-gartenloewe.de/privacy-policy" target="_blank" rel="noreferrer">Datenschutz</a><a href="mailto:info@arslan-gartenloewe.de?subject=Impressum">Impressum anfragen</a></div></div><div className="shell footer-bottom"><span>© {new Date().getFullYear()} Arslan Garten-Löwe</span><span>Bewertungen: MyHammer, Google/ProvenExpert und Gartenbau.org.</span></div></footer>
 
       <div className="mobile-bar"><a href="tel:+4917685466600">Anrufen</a><a href="https://wa.me/4917685466600">WhatsApp</a></div>
     </main>
