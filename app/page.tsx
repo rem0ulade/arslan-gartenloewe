@@ -117,8 +117,8 @@ export default function Home() {
       </section>
 
       <section className="image-ribbon" aria-label="Weitere Gartenimpressionen">
-        <div className="ribbon-track">
-          {[...ribbonImages, ...ribbonImages].map(([img, alt], i)=><figure key={`${img}-${i}`} aria-hidden={i >= ribbonImages.length}><img src={`${base}/images/${img}`} alt={i < ribbonImages.length ? alt : ""} loading="lazy"/></figure>)}
+        <div className="ribbon-track" style={{gap:18}}>
+          {[...ribbonImages, ...ribbonImages].map(([img, alt], i)=><figure key={`${img}-${i}`} aria-hidden={i >= ribbonImages.length}><img src={`${base}/images/${img}`} alt={i < ribbonImages.length ? alt : ""} loading="eager" decoding="async"/></figure>)}
         </div>
       </section>
 
