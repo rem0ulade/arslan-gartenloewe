@@ -1,0 +1,30 @@
+@media (max-width: 600px) {
+  .about-stamp {
+    right: 14px;
+    bottom: 16px;
+    width: 125px;
+    height: 125px;
+    padding: 16px;
+    gap: 5px;
+    transform: rotate(-8deg);
+    text-align: left;
+    overflow: hidden;
+  }
+
+  .about-stamp strong {
+    flex: 0 0 auto;
+    font-size: 24px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .about-stamp span {
+    min-width: 0;
+    max-width: 58px;
+    font-size: 9px;
+    line-height: 1.08;
+    letter-spacing: 0;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+}
